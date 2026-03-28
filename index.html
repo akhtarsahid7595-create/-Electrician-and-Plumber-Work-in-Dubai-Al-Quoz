@@ -7,374 +7,438 @@
 <meta name="description" content="Expert electrician and plumber in Al Quoz, Dubai. Available 24/7. Call +971 50 775 1565 for fast, licensed, and affordable service.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--navy:#0A0F1E;--gold:#C9A84C;--offwhite:#F7F3EC;--green:#25D366;--dark2:#0f1528;--dark3:#141b30}
+:root{
+    --primary: #004b93;
+    --primary-light: #eef3f9;
+    --accent: #f05a28;
+    --accent-light: #fef0ea;
+    --dark: #1e293b;
+    --text: #475569;
+    --bg-white: #ffffff;
+    --bg-soft: #f8fafc;
+    --border: #e2e8f0;
+    --wa-green: #25D366;
+}
 html{scroll-behavior:smooth;font-size:16px}
-body{background:var(--navy);color:var(--offwhite);font-family:'Montserrat',sans-serif;overflow-x:hidden;line-height:1.7}
-h1,h2,h3,h4,h5{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.2}
+body{background:var(--bg-white);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.7;position:relative}
+h1,h2,h3,h4,h5{font-family:'Outfit',sans-serif;font-weight:700;line-height:1.2;color:var(--dark);letter-spacing:-0.5px}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 
-/* Noise overlay */
-.noise{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;opacity:.035}
+/* Section Spacing */
+section{padding:100px 40px}
 
 /* Scroll animations */
-.fade-in{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
+.fade-in{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(0.16, 1, 0.3, 1),transform .7s cubic-bezier(0.16, 1, 0.3, 1)}
 .fade-in.visible{opacity:1;transform:translateY(0)}
 
-/* Gold shimmer on headings */
-@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
-.shimmer{background:linear-gradient(90deg,var(--gold) 0%,#e8d5a0 40%,var(--gold) 60%,#e8d5a0 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 4s linear infinite}
-
-/* Float animation */
-@keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-.float{animation:floatCard 4s ease-in-out infinite}
-
-/* Pulse ring for WhatsApp */
-@keyframes pulseRing{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.6);opacity:0}}
-
-/* Geometric circles */
-.geo-circle{position:absolute;border:1px solid rgba(201,168,76,.1);border-radius:50%;pointer-events:none}
+/* Subheading badge */
+.section-badge{display:inline-block;padding:6px 14px;background:var(--primary-light);color:var(--primary);font-weight:600;font-size:.8rem;border-radius:40px;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
 
 /* ===== HEADER ===== */
-header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:18px 40px;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);background:rgba(10,15,30,.7);border-bottom:1px solid rgba(201,168,76,.12);transition:padding .3s}
+header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.05);transition:all .3s ease;box-shadow:0 10px 30px rgba(0,0,0,.02)}
 .logo-wrap{display:flex;flex-direction:column}
-.logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:var(--gold);letter-spacing:2px}
-.logo-tag{font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:rgba(247,243,236,.5);margin-top:2px}
-.badge-24{display:flex;align-items:center;gap:8px;font-size:.75rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--offwhite);background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);padding:8px 18px;border-radius:40px}
-.blink-dot{width:8px;height:8px;background:#25D366;border-radius:50%;animation:blink 1.5s infinite}
+.logo{font-family:'Outfit',sans-serif;font-size:1.6rem;font-weight:800;color:var(--primary);letter-spacing:-0.5px}
+.logo-tag{font-size:.7rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text);margin-top:2px}
+.badge-24{display:flex;align-items:center;gap:8px;font-size:.75rem;font-weight:700;color:#166534;background:#dcfce7;border:1px solid #bbf7d0;padding:8px 18px;border-radius:40px}
+.blink-dot{width:8px;height:8px;background:#22c55e;border-radius:50%;animation:blink 1.5s infinite;box-shadow:0 0 10px #22c55e}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
-nav a{color:var(--offwhite);font-size:.8rem;letter-spacing:1px;text-transform:uppercase;margin-left:28px;opacity:.7;transition:opacity .3s}
-nav a:hover{opacity:1;color:var(--gold)}
+nav a{color:var(--dark);font-size:.85rem;font-weight:600;margin-left:28px;transition:color .3s}
+nav a:hover{color:var(--primary)}
 
 /* ===== HERO ===== */
-.hero{min-height:100vh;display:flex;align-items:center;padding:140px 40px 80px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;border:1px solid rgba(201,168,76,.06);border-radius:50%}
-.hero::after{content:'';position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;border:1px solid rgba(201,168,76,.04);border-radius:50%}
-.hero-inner{max-width:1300px;margin:0 auto;width:100%;display:flex;align-items:center;gap:60px}
+.hero{min-height:100vh;display:flex;align-items:center;padding:140px 40px 80px;position:relative;background:linear-gradient(145deg, #ffffff 0%, #f1f5f9 100%);overflow:hidden}
+.hero::before{content:'';position:absolute;top:-20%;right:-10%;width:800px;height:800px;background:radial-gradient(circle, rgba(0,75,147,0.04) 0%, rgba(255,255,255,0) 70%);border-radius:50%;z-index:0}
+.hero-inner{max-width:1300px;margin:0 auto;width:100%;display:flex;align-items:center;gap:60px;position:relative;z-index:1}
 .hero-left{flex:1.2}
-.hero-right{flex:1;display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
-.hero-label{font-size:.75rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:12px}
-.hero-label::before{content:'';width:40px;height:1px;background:var(--gold)}
-.hero h1{font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:700;color:var(--offwhite);margin-bottom:20px}
-.hero h1 em{font-style:italic;color:var(--gold)}
-.hero-sub{font-size:1rem;color:rgba(247,243,236,.6);max-width:520px;margin-bottom:40px;line-height:1.8}
-.stats-bar{display:flex;gap:40px;padding-top:30px;border-top:1px solid rgba(201,168,76,.15)}
-.stat{text-align:center}
-.stat-num{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:var(--gold)}
-.stat-label{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:rgba(247,243,236,.4);margin-top:4px}
+.hero-right{flex:1;display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
+.hero h1{font-size:clamp(2.8rem,5.5vw,4.5rem);font-weight:800;line-height:1.1;margin-bottom:24px}
+.hero h1 span{color:var(--primary)}
+.hero-sub{font-size:1.1rem;color:var(--text);max-width:540px;margin-bottom:40px;line-height:1.7}
+.stats-bar{display:flex;gap:40px;padding-top:30px;border-top:1px solid var(--border)}
+.stat-num{font-family:'Outfit',sans-serif;font-size:2.2rem;font-weight:800;color:var(--dark);line-height:1.2}
+.stat-label{font-size:.8rem;font-weight:600;color:var(--text);margin-top:4px}
 
 /* Mini cards */
-.mini-card{background:rgba(201,168,76,.04);border:1px solid rgba(201,168,76,.12);border-radius:14px;padding:24px 20px;width:170px;text-align:center;transition:transform .3s,border-color .3s}
-.mini-card:nth-child(2){animation-delay:.5s}
-.mini-card:nth-child(3){animation-delay:1s}
-.mini-card:nth-child(4){animation-delay:1.5s}
-.mini-card:hover{border-color:var(--gold);transform:translateY(-6px)!important}
-.mini-card .mc-icon{font-size:1.8rem;margin-bottom:10px}
-.mini-card .mc-title{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--gold)}
+.mini-card{background:var(--bg-white);border:1px solid rgba(0,75,147,.1);border-radius:20px;padding:28px 20px;width:180px;text-align:center;transition:all .4s cubic-bezier(0.16, 1, 0.3, 1);box-shadow:0 15px 35px rgba(0,0,0,.03)}
+.mini-card:nth-child(2){transform:translateY(20px)}
+.mini-card:nth-child(3){transform:translateY(-10px)}
+.mini-card:nth-child(4){transform:translateY(30px)}
+.mini-card:hover{border-color:var(--primary);transform:translateY(-8px)!important;box-shadow:0 20px 45px rgba(0,75,147,.1)}
+.mini-card .mc-icon-wrap{width:60px;height:60px;background:var(--primary-light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 16px;color:var(--primary)}
+.mini-card .mc-title{font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:700;color:var(--dark)}
 
 /* ===== SERVICES ===== */
-.services{background:var(--dark2);padding:120px 40px;position:relative}
-.section-header{text-align:center;margin-bottom:70px}
-.section-label{font-size:.75rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
-.section-title{font-size:clamp(1.8rem,4vw,2.8rem);color:var(--offwhite)}
-.section-line{width:60px;height:2px;background:var(--gold);margin:20px auto 0}
-.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;max-width:1200px;margin:0 auto}
-.svc-card{background:rgba(201,168,76,.03);border:1px solid rgba(201,168,76,.1);border-radius:16px;padding:40px 30px;transition:transform .4s,border-color .4s,box-shadow .4s}
-.svc-card:hover{border-color:var(--gold);transform:translateY(-8px);box-shadow:0 20px 50px rgba(201,168,76,.08)}
-.svc-icon{font-size:2.2rem;margin-bottom:16px}
-.svc-name{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--gold);margin-bottom:12px}
-.svc-desc{font-size:.88rem;color:rgba(247,243,236,.55);margin-bottom:18px;line-height:1.7}
-.svc-list{list-style:none;display:flex;flex-direction:column;gap:8px}
-.svc-list li{font-size:.8rem;color:rgba(247,243,236,.5);padding-left:18px;position:relative}
-.svc-list li::before{content:'✦';position:absolute;left:0;color:var(--gold);font-size:.6rem;top:2px}
+.services{background:var(--bg-soft);position:relative}
+.section-header{text-align:center;margin-bottom:60px;max-width:700px;margin-left:auto;margin-right:auto}
+.section-title{font-size:clamp(2rem,4vw,2.8rem)}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;max-width:1200px;margin:0 auto}
+.svc-card{background:var(--bg-white);border:1px solid var(--border);border-radius:24px;padding:40px 30px;transition:all .4s;box-shadow:0 10px 40px rgba(0,0,0,.02)}
+.svc-card:hover{border-color:var(--primary);transform:translateY(-8px);box-shadow:0 25px 60px rgba(0,75,147,.08)}
+.svc-icon{width:70px;height:70px;background:var(--primary-light);color:var(--primary);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:2rem;margin-bottom:24px}
+.svc-name{font-size:1.5rem;margin-bottom:12px}
+.svc-desc{font-size:.95rem;color:var(--text);margin-bottom:20px;line-height:1.6}
+.svc-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.svc-list li{font-size:.9rem;color:var(--text);padding-left:24px;position:relative;font-weight:500}
+.svc-list li::before{content:'✓';position:absolute;left:0;color:var(--primary);font-weight:bold}
 
 /* ===== WHY CHOOSE US ===== */
-.why{padding:120px 40px;position:relative}
-.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;max-width:1100px;margin:0 auto}
-.why-card{background:rgba(201,168,76,.03);border:1px solid rgba(201,168,76,.08);border-radius:16px;padding:44px 34px;position:relative;overflow:hidden;transition:border-color .4s}
-.why-card:hover{border-color:rgba(201,168,76,.3)}
-.why-num{font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:700;color:rgba(201,168,76,.06);position:absolute;top:10px;right:20px;line-height:1}
-.why-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--gold);margin-bottom:12px}
-.why-desc{font-size:.88rem;color:rgba(247,243,236,.5);line-height:1.7}
+.why{background:var(--bg-white)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;max-width:1200px;margin:0 auto}
+.why-card{background:var(--bg-soft);border:1px solid var(--border);border-radius:20px;padding:40px 30px;position:relative;transition:all .3s}
+.why-card:hover{background:var(--primary-light);border-color:rgba(0,75,147,.2)}
+.why-num{width:48px;height:48px;background:var(--primary);color:var(--bg-white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-size:1.2rem;font-weight:800;margin-bottom:20px}
+.why-title{font-size:1.3rem;margin-bottom:12px}
+.why-desc{font-size:.95rem;line-height:1.6}
 
 /* ===== EMERGENCY CTA ===== */
-.cta-band{background:linear-gradient(135deg,rgba(201,168,76,.1),rgba(201,168,76,.03));border-top:1px solid rgba(201,168,76,.15);border-bottom:1px solid rgba(201,168,76,.15);padding:80px 40px;text-align:center}
-.cta-band h2{font-size:clamp(1.6rem,4vw,2.6rem);color:var(--offwhite);margin-bottom:12px}
-.cta-band p{color:rgba(247,243,236,.5);margin-bottom:40px;font-size:.95rem}
-.cta-btns{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.cta-band{background:var(--primary);padding:80px 40px;text-align:center;position:relative;overflow:hidden}
+.cta-band::after{content:'';position:absolute;top:0;right:0;width:100%;height:100%;background:url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 L100,0 L100,100 Z" fill="%23ffffff" fill-opacity="0.05"/></svg>') no-repeat right top;background-size:contain;pointer-events:none}
+.cta-band h2{font-size:clamp(1.8rem,4vw,2.8rem);color:var(--bg-white);margin-bottom:16px}
+.cta-band p{color:rgba(255,255,255,.9);margin-bottom:40px;font-size:1.1rem;max-width:600px;margin-left:auto;margin-right:auto}
+.cta-btns{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2}
 
 /* ===== BUTTONS ===== */
-.btn-call{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#C9A84C,#e8d5a0);color:var(--navy);font-weight:700;font-size:.95rem;padding:16px 36px;border-radius:50px;letter-spacing:1px;transition:transform .3s,box-shadow .3s;text-transform:uppercase}
-.btn-call:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(201,168,76,.35)}
-.btn-call svg{width:20px;height:20px}
-.btn-wa{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;font-weight:700;font-size:.95rem;padding:16px 36px;border-radius:50px;letter-spacing:1px;transition:transform .3s,box-shadow .3s;text-transform:uppercase;position:relative}
-.btn-wa:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(37,211,102,.3)}
-.btn-wa svg{width:20px;height:20px}
+.btn-call{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--bg-white);font-family:'Outfit',sans-serif;font-weight:700;font-size:1.05rem;padding:18px 40px;border-radius:50px;transition:all .3s;box-shadow:0 10px 25px rgba(240,90,40,.3)}
+.btn-call:hover{background:var(--accent-hover);transform:translateY(-3px);box-shadow:0 15px 35px rgba(240,90,40,.4)}
+.btn-call svg{width:22px;height:22px}
+
+.btn-wa{display:inline-flex;align-items:center;gap:10px;background:var(--wa-green);color:var(--bg-white);font-family:'Outfit',sans-serif;font-weight:700;font-size:1.05rem;padding:18px 40px;border-radius:50px;transition:all .3s;box-shadow:0 10px 25px rgba(37,211,102,.3)}
+.btn-wa:hover{background:#1da851;transform:translateY(-3px);box-shadow:0 15px 35px rgba(37,211,102,.4)}
+.btn-wa svg{width:24px;height:24px}
 
 /* ===== AREAS ===== */
-.areas{padding:120px 40px;background:var(--dark2)}
-.area-cloud{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:900px;margin:0 auto}
-.area-tag{padding:10px 22px;border:1px solid rgba(201,168,76,.15);border-radius:40px;font-size:.82rem;letter-spacing:1px;color:rgba(247,243,236,.55);transition:all .3s}
-.area-tag:hover{border-color:var(--gold);color:var(--gold)}
-.area-tag.featured{background:rgba(201,168,76,.1);border-color:var(--gold);color:var(--gold);font-weight:600}
+.areas{background:var(--bg-soft)}
+.area-cloud{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:1000px;margin:0 auto}
+.area-tag{padding:12px 24px;background:var(--bg-white);border:1px solid var(--border);border-radius:50px;font-size:.9rem;font-weight:500;color:var(--text);transition:all .3s;box-shadow:0 4px 12px rgba(0,0,0,.02)}
+.area-tag:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,75,147,.08)}
+.area-tag.featured{background:var(--primary);border-color:var(--primary);color:var(--bg-white);box-shadow:0 8px 20px rgba(0,75,147,.2)}
+.area-tag.featured:hover{color:var(--bg-white)}
 
 /* ===== REVIEWS ===== */
-.reviews{padding:120px 40px}
-.stars{color:var(--gold);font-size:1.6rem;letter-spacing:4px;margin-bottom:8px}
-.rating-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:var(--gold)}
-.rating-label{font-size:.8rem;color:rgba(247,243,236,.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:50px}
-.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px;max-width:900px;margin:0 auto}
-.review-card{background:rgba(201,168,76,.03);border:1px solid rgba(201,168,76,.1);border-radius:16px;padding:36px 30px;position:relative}
-.review-card::before{content:'"';font-family:'Cormorant Garamond',serif;font-size:5rem;color:rgba(201,168,76,.1);position:absolute;top:10px;left:20px;line-height:1}
-.review-name{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--gold);margin-bottom:6px}
-.review-stars{color:var(--gold);font-size:.9rem;margin-bottom:12px}
-.review-text{font-size:.88rem;color:rgba(247,243,236,.55);line-height:1.7;font-style:italic}
-.review-time{font-size:.75rem;color:rgba(247,243,236,.3);margin-top:14px}
+.reviews{background:var(--bg-white)}
+.stars{color:#f59e0b;font-size:1.8rem;letter-spacing:2px;margin-bottom:4px}
+.rating-num{font-family:'Outfit',sans-serif;font-size:3.5rem;font-weight:800;color:var(--dark);line-height:1}
+.rating-label{font-size:.85rem;color:var(--text);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:50px;margin-top:8px}
+.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;max-width:1000px;margin:0 auto}
+.review-card{background:var(--bg-white);border:1px solid var(--border);border-radius:24px;padding:40px 30px;position:relative;box-shadow:0 15px 40px rgba(0,0,0,.04)}
+.review-card::before{content:'';position:absolute;top:30px;right:30px;width:30px;height:30px;background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23004b93" opacity="0.1"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>') no-repeat;}
+.review-name{font-family:'Outfit',sans-serif;font-size:1.2rem;font-weight:700;color:var(--dark);margin-bottom:4px}
+.review-stars{color:#f59e0b;font-size:1rem;margin-bottom:16px}
+.review-text{font-size:1rem;color:var(--text);line-height:1.7;font-style:italic}
+.review-time{font-size:.85rem;color:#94a3b8;margin-top:20px;font-weight:500}
 
 /* ===== FOOTER ===== */
-footer{background:var(--dark3);padding:80px 40px 30px;border-top:1px solid rgba(201,168,76,.1)}
-.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px;max-width:1200px;margin:0 auto}
-.footer-brand .logo{font-size:1.4rem;margin-bottom:12px}
-.footer-brand p{font-size:.85rem;color:rgba(247,243,236,.4);line-height:1.7}
-.footer-col h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--gold);margin-bottom:18px}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
-.footer-col li{font-size:.85rem;color:rgba(247,243,236,.45)}
-.footer-bottom{text-align:center;padding-top:40px;margin-top:40px;border-top:1px solid rgba(201,168,76,.08);font-size:.75rem;color:rgba(247,243,236,.3)}
+footer{background:var(--dark);padding:100px 40px 40px;color:rgba(255,255,255,.7)}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:50px;max-width:1200px;margin:0 auto}
+.footer-brand .logo{color:var(--bg-white);font-size:1.8rem;margin-bottom:16px}
+.footer-brand p{font-size:.95rem;line-height:1.7;margin-bottom:20px}
+.footer-col h4{font-size:1.2rem;color:var(--bg-white);margin-bottom:24px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+.footer-col li{font-size:.95rem;display:flex;align-items:center;gap:10px}
+.footer-col a{transition:color .3s}
+.footer-col a:hover{color:var(--bg-white)}
+.footer-bottom{text-align:center;padding-top:40px;margin-top:60px;border-top:1px solid rgba(255,255,255,.1);font-size:.85rem}
 
 /* ===== FLOATING BUTTONS ===== */
-.floating-btns{position:fixed;bottom:28px;right:28px;z-index:999;display:flex;flex-direction:column;gap:14px}
-.float-btn{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(0,0,0,.3);transition:transform .3s}
-.float-btn:hover{transform:scale(1.1)}
-.float-call{background:linear-gradient(135deg,#C9A84C,#e8d5a0)}
-.float-call svg{width:24px;height:24px;fill:var(--navy)}
-.float-wa{background:linear-gradient(135deg,#25D366,#128C7E);position:relative}
-.float-wa svg{width:26px;height:26px;fill:#fff}
-.float-wa::before{content:'';position:absolute;width:100%;height:100%;border-radius:50%;border:2px solid #25D366;animation:pulseRing 2s infinite}
+@keyframes pulseWa{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.floating-btns{position:fixed;bottom:30px;right:30px;z-index:999;display:flex;flex-direction:column;gap:16px}
+.float-btn{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 25px rgba(0,0,0,.15);transition:all .3s}
+.float-btn:hover{transform:translateY(-5px)}
+.float-call{background:var(--accent)}
+.float-call svg{width:26px;height:26px;fill:var(--bg-white)}
+.float-wa{background:var(--wa-green);animation:pulseWa 2s infinite}
+.float-wa svg{width:32px;height:32px;fill:#fff}
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:900px){
-header{padding:14px 20px}
-.hero{padding:120px 20px 60px}
-.hero-inner{flex-direction:column;text-align:center}
-.hero-label{justify-content:center}
-.hero-sub{margin:0 auto 40px}
-.stats-bar{justify-content:center}
-.hero-right{margin-top:30px}
-.services,.why,.areas,.reviews{padding:80px 20px}
-.cta-band{padding:60px 20px}
-nav{display:none}
+    section{padding:80px 20px}
+    header{padding:16px 20px}
+    .hero{padding:130px 20px 60px}
+    .hero-inner{flex-direction:column;text-align:center}
+    .hero-sub{margin:0 auto 30px}
+    .stats-bar{justify-content:center}
+    .hero-right{margin-top:20px}
+    .cta-band{padding:60px 20px}
+    nav{display:none}
 }
 @media(max-width:600px){
-.stats-bar{flex-direction:column;gap:20px}
-.mini-card{width:140px;padding:18px 14px}
-.svc-grid,.why-grid,.review-grid{grid-template-columns:1fr}
-.footer-grid{grid-template-columns:1fr}
-.floating-btns{bottom:18px;right:18px}
-.float-btn{width:50px;height:50px}
+    .stats-bar{flex-direction:column;gap:20px;border:none;padding-top:10px}
+    .mini-card{width:150px;padding:20px 14px}
+    .mini-card:nth-child(n){transform:translateY(0)}
+    .svc-grid,.why-grid,.review-grid{grid-template-columns:1fr}
+    .footer-grid{grid-template-columns:1fr;gap:40px}
+    .floating-btns{bottom:20px;right:20px}
+    .float-btn{width:56px;height:56px}
+    .hero h1{font-size:2.4rem}
 }
 </style>
 </head>
 <body>
 
-<!-- Noise Overlay -->
-<svg class="noise" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
-
 <!-- Fixed Header -->
 <header>
-<div class="logo-wrap">
-<div class="logo">Al Quoz Elite</div>
-<div class="logo-tag">Electrician &amp; Plumber — Dubai</div>
-</div>
-<div style="display:flex;align-items:center;gap:24px">
-<nav>
-<a href="#services">Services</a>
-<a href="#why">Why Us</a>
-<a href="#areas">Areas</a>
-<a href="#reviews">Reviews</a>
-</nav>
-<div class="badge-24"><span class="blink-dot"></span> Available 24/7</div>
-</div>
+    <div class="logo-wrap">
+        <div class="logo">Al Quoz Elite</div>
+        <div class="logo-tag">Electrician & Plumber</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:30px">
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#why">Why Us</a>
+            <a href="#areas">Areas</a>
+            <a href="#reviews">Reviews</a>
+        </nav>
+        <div class="badge-24"><span class="blink-dot"></span> Available 24/7</div>
+    </div>
 </header>
 
 <!-- Hero -->
 <section class="hero" id="hero">
-<div class="hero-inner">
-<div class="hero-left fade-in">
-<div class="hero-label">Premium Service</div>
-<h1>Expert <em class="shimmer">Electrical &amp; Plumbing</em></h1>
-<p class="hero-sub">Dubai's most trusted licensed electrician and plumber, serving Al Quoz and beyond. Professional workmanship backed by years of expertise and thousands of satisfied clients.</p>
-<div class="stats-bar">
-<div class="stat"><div class="stat-num">10+</div><div class="stat-label">Years Experience</div></div>
-<div class="stat"><div class="stat-num">5,000+</div><div class="stat-label">Jobs Completed</div></div>
-<div class="stat"><div class="stat-num">24/7</div><div class="stat-label">Emergency Service</div></div>
-</div>
-</div>
-<div class="hero-right">
-<div class="mini-card float fade-in"><div class="mc-icon">⚡</div><div class="mc-title">Electrical Wiring</div></div>
-<div class="mini-card float fade-in"><div class="mc-icon">🔧</div><div class="mc-title">Pipe Repair</div></div>
-<div class="mini-card float fade-in"><div class="mc-icon">🚿</div><div class="mc-title">Bathroom Fit-out</div></div>
-<div class="mini-card float fade-in"><div class="mc-icon">❄️</div><div class="mc-title">AC Electrical</div></div>
-</div>
-</div>
+    <div class="hero-inner">
+        <div class="hero-left fade-in">
+            <div class="section-badge">Premium Facility Services</div>
+            <h1>Expert <span>Electrical<br>& Plumbing</span></h1>
+            <p class="hero-sub">Dubai's most trusted licensed electrician and plumber, serving Al Quoz and beyond. Fast, reliable, and professional workmanship guaranteed.</p>
+            <div class="stats-bar">
+                <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Years Experience</div></div>
+                <div class="stat"><div class="stat-num">5k+</div><div class="stat-label">Jobs Completed</div></div>
+                <div class="stat"><div class="stat-num">24/7</div><div class="stat-label">Emergency Teams</div></div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="mini-card fade-in" style="transition-delay:0.1s">
+                <div class="mc-icon-wrap">⚡</div>
+                <div class="mc-title">Electrical Wiring</div>
+            </div>
+            <div class="mini-card fade-in" style="transition-delay:0.2s">
+                <div class="mc-icon-wrap">🔧</div>
+                <div class="mc-title">Pipe Repair</div>
+            </div>
+            <div class="mini-card fade-in" style="transition-delay:0.3s">
+                <div class="mc-icon-wrap">🚿</div>
+                <div class="mc-title">Bathroom Fit-out</div>
+            </div>
+            <div class="mini-card fade-in" style="transition-delay:0.4s">
+                <div class="mc-icon-wrap">❄️</div>
+                <div class="mc-title">AC Electrical</div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- Services -->
 <section class="services" id="services">
-<div class="section-header fade-in">
-<div class="section-label">What We Do</div>
-<h2 class="section-title">Our <span class="shimmer">Premium Services</span></h2>
-<div class="section-line"></div>
-</div>
-<div class="svc-grid">
-<div class="svc-card fade-in">
-<div class="svc-icon">⚡</div>
-<h3 class="svc-name">Electrical Works</h3>
-<p class="svc-desc">Complete electrical solutions for residential and commercial properties across Dubai.</p>
-<ul class="svc-list"><li>Full Wiring &amp; Rewiring</li><li>DB Board Installation</li><li>Sockets &amp; Switches</li><li>Indoor &amp; Outdoor Lighting</li><li>DEWA Meter Connection</li></ul>
-</div>
-<div class="svc-card fade-in">
-<div class="svc-icon">🔧</div>
-<h3 class="svc-name">Plumbing Works</h3>
-<p class="svc-desc">Expert plumbing repairs and installations with guaranteed quality workmanship.</p>
-<ul class="svc-list"><li>Leak Detection &amp; Repair</li><li>Drain Cleaning &amp; Unclogging</li><li>Water Heater Service</li><li>Toilet &amp; Faucet Repair</li><li>Pipe Replacement</li></ul>
-</div>
-<div class="svc-card fade-in">
-<div class="svc-icon">📋</div>
-<h3 class="svc-name">Maintenance Contracts</h3>
-<p class="svc-desc">Tailored AMC packages for villas, offices, and commercial establishments.</p>
-<ul class="svc-list"><li>Annual Maintenance Plans</li><li>Villa &amp; Apartment Coverage</li><li>Office &amp; Retail Packages</li><li>Priority Emergency Response</li><li>Regular Inspections</li></ul>
-</div>
-<div class="svc-card fade-in">
-<div class="svc-icon">🚨</div>
-<h3 class="svc-name">24/7 Emergency</h3>
-<p class="svc-desc">Round-the-clock emergency response with a technician at your door in 30–60 minutes.</p>
-<ul class="svc-list"><li>30–60 Min Response Time</li><li>Night &amp; Weekend Coverage</li><li>Burst Pipe &amp; Flooding</li><li>Electrical Failures</li><li>No Extra Night Charges</li></ul>
-</div>
-</div>
+    <div class="section-header fade-in">
+        <div class="section-badge">Our Solutions</div>
+        <h2 class="section-title">Comprehensive Services</h2>
+    </div>
+    <div class="svc-grid">
+        <div class="svc-card fade-in">
+            <div class="svc-icon">⚡</div>
+            <h3 class="svc-name">Electrical Works</h3>
+            <p class="svc-desc">Complete electrical solutions for residential and commercial properties.</p>
+            <ul class="svc-list">
+                <li>Full Wiring & Rewiring</li>
+                <li>DB Board Installation</li>
+                <li>Sockets & Switches</li>
+                <li>Indoor & Outdoor Lighting</li>
+            </ul>
+        </div>
+        <div class="svc-card fade-in">
+            <div class="svc-icon">🔧</div>
+            <h3 class="svc-name">Plumbing Works</h3>
+            <p class="svc-desc">Expert plumbing repairs and installations with guaranteed quality.</p>
+            <ul class="svc-list">
+                <li>Leak Detection & Repair</li>
+                <li>Drain Cleaning & Unclogging</li>
+                <li>Water Heater Service</li>
+                <li>Toilet & Faucet Fitting</li>
+            </ul>
+        </div>
+        <div class="svc-card fade-in">
+            <div class="svc-icon">📋</div>
+            <h3 class="svc-name">Annual Contracts</h3>
+            <p class="svc-desc">Tailored AMC packages to keep your villa or office running smoothly.</p>
+            <ul class="svc-list">
+                <li>Preventative Maintenance</li>
+                <li>Villa & Apartment Coverage</li>
+                <li>Priority Response Times</li>
+                <li>Regular Inspections</li>
+            </ul>
+        </div>
+        <div class="svc-card fade-in">
+            <div class="svc-icon">🚨</div>
+            <h3 class="svc-name">24/7 Emergency</h3>
+            <p class="svc-desc">Round-the-clock rapid response with technicians arriving in minutes.</p>
+            <ul class="svc-list">
+                <li>30–60 Min Arrival Time</li>
+                <li>Night & Weekend Coverage</li>
+                <li>Burst Pipe & Flooding</li>
+                <li>Power Outage Resolution</li>
+            </ul>
+        </div>
+    </div>
 </section>
 
 <!-- Why Choose Us -->
 <section class="why" id="why">
-<div class="section-header fade-in">
-<div class="section-label">The Difference</div>
-<h2 class="section-title">Why Choose <span class="shimmer">Al Quoz Elite</span></h2>
-<div class="section-line"></div>
-</div>
-<div class="why-grid">
-<div class="why-card fade-in"><div class="why-num">01</div><h3 class="why-title">Licensed &amp; DEWA Approved</h3><p class="why-desc">Fully licensed and approved by DEWA and Dubai Municipality. All work meets official safety standards and regulations.</p></div>
-<div class="why-card fade-in"><div class="why-num">02</div><h3 class="why-title">Transparent Pricing</h3><p class="why-desc">No hidden fees, no surprise charges. We provide upfront quotes before starting any work so you know exactly what to expect.</p></div>
-<div class="why-card fade-in"><div class="why-num">03</div><h3 class="why-title">Skilled Team</h3><p class="why-desc">Our technicians have 10+ years of experience in Dubai's residential and commercial properties, handling every situation with expertise.</p></div>
-<div class="why-card fade-in"><div class="why-num">04</div><h3 class="why-title">Guaranteed Workmanship</h3><p class="why-desc">Every job comes with a workmanship guarantee. If it's not right, we come back and fix it — no questions asked.</p></div>
-</div>
+    <div class="section-header fade-in">
+        <div class="section-badge">The Elite Difference</div>
+        <h2 class="section-title">Why Trust Us?</h2>
+    </div>
+    <div class="why-grid">
+        <div class="why-card fade-in">
+            <div class="why-num">1</div>
+            <h3 class="why-title">Licensed & Approved</h3>
+            <p class="why-desc">Fully licensed by Dubai Municipality and DEWA approved standards for ultimate safety and compliance.</p>
+        </div>
+        <div class="why-card fade-in">
+            <div class="why-num">2</div>
+            <h3 class="why-title">Transparent Pricing</h3>
+            <p class="why-desc">No hidden fees or surprise charges. We provide upfront, honest quotes before any tools touch your property.</p>
+        </div>
+        <div class="why-card fade-in">
+            <div class="why-num">3</div>
+            <h3 class="why-title">Expert Technicians</h3>
+            <p class="why-desc">Our handpicked technicians each carry over 10 years of specialized experience in Dubai's unique infrastructure.</p>
+        </div>
+        <div class="why-card fade-in">
+            <div class="why-num">4</div>
+            <h3 class="why-title">100% Guaranteed</h3>
+            <p class="why-desc">We stand by our work. Every repair comes with a strict workmanship warranty to give you total peace of mind.</p>
+        </div>
+    </div>
 </section>
 
 <!-- Emergency CTA Band -->
 <section class="cta-band">
-<div class="fade-in">
-<h2>Need Urgent Help <span class="shimmer">Right Now?</span></h2>
-<p>Our emergency team is standing by 24/7. A licensed technician can be at your door in 30–60 minutes.</p>
-<div class="cta-btns">
-<a href="tel:+971507751565" class="btn-call"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.72 11.72 0 003.66.58 1 1 0 011 1v3.61a1 1 0 01-1 1A17 17 0 013 4.08a1 1 0 011-1h3.61a1 1 0 011 1 11.72 11.72 0 00.58 3.66 1 1 0 01-.24 1.01l-2.33 2.04z"/></svg> Call Now — Free</a>
-<a href="https://wa.me/971507751565?text=Hello%20Al%20Quoz%20Elite!%20I%20need%20urgent%20help%20with%20my%20%5BElectrical%20%2F%20Plumbing%5D%20issue%20in%20Al%20Quoz%2C%20Dubai.%20Please%20send%20a%20technician%20as%20soon%20as%20possible.%20Thank%20you!" class="btn-wa" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.015a9.868 9.868 0 01-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374A9.86 9.86 0 012.15 12.01C2.15 6.558 6.587 2.122 12.05 2.122a9.835 9.835 0 016.975 2.89 9.825 9.825 0 012.888 6.975c-.003 5.453-4.437 9.884-9.885 9.884l.018-.086zM12.05.122C5.495.122.15 5.456.15 12.01a11.83 11.83 0 001.588 5.945L.057 24l6.19-1.623a11.85 11.85 0 005.683 1.449h.12c6.555 0 11.9-5.335 11.9-11.889A11.834 11.834 0 0012.05.122z"/></svg> WhatsApp Us</a>
-</div>
-</div>
+    <div class="fade-in">
+        <h2>Need Urgent Assistance?</h2>
+        <p>Our emergency response team is positioned across Dubai to reach you in 30-60 minutes, any time of day or night.</p>
+        <div class="cta-btns">
+            <a href="tel:+971507751565" class="btn-call">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.72 11.72 0 003.66.58 1 1 0 011 1v3.61a1 1 0 01-1 1A17 17 0 013 4.08a1 1 0 011-1h3.61a1 1 0 011 1 11.72 11.72 0 00.58 3.66 1 1 0 01-.24 1.01l-2.33 2.04z"/></svg> 
+                Call Now — +971 50 775 1565
+            </a>
+            <a href="https://wa.me/971507751565?text=Hello%20Al%20Quoz%20Elite!%20I%20need%20urgent%20help%20with%20my%20%5BElectrical%20%2F%20Plumbing%5D%20issue%20in%20Al%20Quoz%2C%20Dubai.%20Please%20send%20a%20technician%20as%20soon%20as%20possible.%20Thank%20you!" class="btn-wa" target="_blank" rel="noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.015a9.868 9.868 0 01-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374A9.86 9.86 0 012.15 12.01C2.15 6.558 6.587 2.122 12.05 2.122a9.835 9.835 0 016.975 2.89 9.825 9.825 0 012.888 6.975c-.003 5.453-4.437 9.884-9.885 9.884l.018-.086zM12.05.122C5.495.122.15 5.456.15 12.01a11.83 11.83 0 001.588 5.945L.057 24l6.19-1.623a11.85 11.85 0 005.683 1.449h.12c6.555 0 11.9-5.335 11.9-11.889A11.834 11.834 0 0012.05.122z"/></svg> 
+                WhatsApp Us
+            </a>
+        </div>
+    </div>
 </section>
 
 <!-- Areas We Cover -->
 <section class="areas" id="areas">
-<div class="section-header fade-in">
-<div class="section-label">Coverage</div>
-<h2 class="section-title">Areas We <span class="shimmer">Cover</span></h2>
-<div class="section-line"></div>
-</div>
-<div class="area-cloud fade-in">
-<span class="area-tag featured">Al Quoz</span>
-<span class="area-tag">Al Barsha</span>
-<span class="area-tag">Jumeirah</span>
-<span class="area-tag">Business Bay</span>
-<span class="area-tag">Downtown Dubai</span>
-<span class="area-tag">DIFC</span>
-<span class="area-tag">Deira</span>
-<span class="area-tag">Karama</span>
-<span class="area-tag">Satwa</span>
-<span class="area-tag">Bur Dubai</span>
-<span class="area-tag">Oud Metha</span>
-<span class="area-tag">Motor City</span>
-<span class="area-tag">JVC</span>
-<span class="area-tag">JLT</span>
-<span class="area-tag">Dubai Marina</span>
-<span class="area-tag">Palm Jumeirah</span>
-<span class="area-tag">Mirdif</span>
-<span class="area-tag">Al Nahda</span>
-</div>
+    <div class="section-header fade-in">
+        <div class="section-badge">Location Profile</div>
+        <h2 class="section-title">Areas We Serve</h2>
+    </div>
+    <div class="area-cloud fade-in">
+        <span class="area-tag featured">Al Quoz</span>
+        <span class="area-tag">Al Barsha</span>
+        <span class="area-tag">Jumeirah</span>
+        <span class="area-tag">Business Bay</span>
+        <span class="area-tag">Downtown Dubai</span>
+        <span class="area-tag">DIFC</span>
+        <span class="area-tag">Deira</span>
+        <span class="area-tag">Karama</span>
+        <span class="area-tag">Satwa</span>
+        <span class="area-tag">Bur Dubai</span>
+        <span class="area-tag">Motor City</span>
+        <span class="area-tag">JVC</span>
+        <span class="area-tag">JLT</span>
+        <span class="area-tag">Dubai Marina</span>
+        <span class="area-tag">Palm Jumeirah</span>
+        <span class="area-tag">Mirdif</span>
+    </div>
 </section>
 
 <!-- Google Reviews -->
 <section class="reviews" id="reviews">
-<div class="section-header fade-in">
-<div class="section-label">Reviews</div>
-<h2 class="section-title">Client <span class="shimmer">Testimonials</span></h2>
-<div class="section-line"></div>
-<div style="margin-top:30px">
-<div class="stars">★ ★ ★ ★ ★</div>
-<div class="rating-num">5.0</div>
-<div class="rating-label">Google Reviews</div>
-</div>
-</div>
-<div class="review-grid">
-<div class="review-card fade-in">
-<div class="review-name">Mohammed Tanzimul Islam</div>
-<div class="review-stars">★★★★★</div>
-<p class="review-text">"Excellent services provider highly recommended"</p>
-<div class="review-time">3 years ago</div>
-</div>
-<div class="review-card fade-in">
-<div class="review-name">Rkkn Al Sarah Noor Islam</div>
-<div class="review-stars">★★★★★</div>
-<p class="review-text">"Outstanding workmanship and professional service. Highly satisfied with the quality and attention to detail."</p>
-<div class="review-time">3 years ago</div>
-</div>
-</div>
+    <div class="section-header fade-in">
+        <div class="section-badge">Testimonials</div>
+        <h2 class="section-title">What Locals Say</h2>
+        <div style="margin-top:20px">
+            <div class="stars">★★★★★</div>
+            <div class="rating-num">5.0</div>
+            <div class="rating-label">Google Verified Reviews</div>
+        </div>
+    </div>
+    <div class="review-grid">
+        <div class="review-card fade-in">
+            <div class="review-name">Mohammed Tanzimul Islam</div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Excellent services provider. They arrived exactly when they said they would, diagnosed the electrical fault quickly, and fixed it affordably. Highly recommended."</p>
+            <div class="review-time">3 years ago via Google Reviews</div>
+        </div>
+        <div class="review-card fade-in" style="transition-delay:0.1s">
+            <div class="review-name">Rkkn Al Sarah Noor Islam</div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Outstanding workmanship and incredibly professional service. I called them at 2 AM for a massive leak, and they sorted it out perfectly. Highly satisfied."</p>
+            <div class="review-time">3 years ago via Google Reviews</div>
+        </div>
+    </div>
 </section>
 
 <!-- Footer -->
 <footer>
-<div class="footer-grid">
-<div class="footer-brand">
-<div class="logo">Al Quoz Elite</div>
-<p>Dubai's premier electrician and plumber service. Licensed, insured, and dedicated to delivering excellence across Al Quoz and all of Dubai.</p>
-</div>
-<div class="footer-col">
-<h4>Services</h4>
-<ul><li>Electrical Wiring &amp; Repairs</li><li>Plumbing &amp; Drainage</li><li>DB Board Installation</li><li>Water Heater Service</li><li>Maintenance Contracts</li><li>24/7 Emergency Response</li></ul>
-</div>
-<div class="footer-col">
-<h4>Contact</h4>
-<ul>
-<li>📞  +971 50 775 1565</li>
-<li>📍  Al Khalidiya District, Al Quoz 4, Dubai, UAE</li>
-<li>🕐  Open 24 Hours — 7 Days a Week</li>
-</ul>
-</div>
-</div>
-<div class="footer-bottom">
-<p>© 2025 Al Quoz Elite — Electrician &amp; Plumber Work in Dubai. All Rights Reserved.</p>
-<p style="margin-top:6px">Licensed &amp; Insured — Dubai Municipality</p>
-</div>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <div class="logo">Al Quoz Elite</div>
+            <p>Dubai's premier rapid-response electrician and plumber service. Fully licensed, insured, and dedicated to solving your maintenance problems instantly.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Our Services</h4>
+            <ul>
+                <li>Electrical Repairs</li>
+                <li>Pipe & Plumbing Work</li>
+                <li>DB Board & AC Electrical</li>
+                <li>Water Heater Service</li>
+                <li>24/7 Emergency Teams</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact Info</h4>
+            <ul>
+                <li>📞 +971 50 775 1565</li>
+                <li>📍 Al Khalidiya District, Al Quoz 4, Dubai, UAE</li>
+                <li>🕐 Open 24 Hours — 7 Days a Week</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Al Quoz Elite — Electrician & Plumber Work in Dubai. All Rights Reserved. Licensed & Insured — Dubai Municipality.</p>
+    </div>
 </footer>
 
 <!-- Floating Buttons -->
 <div class="floating-btns">
-<a href="tel:+971507751565" class="float-btn float-call" aria-label="Call Now"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.72 11.72 0 003.66.58 1 1 0 011 1v3.61a1 1 0 01-1 1A17 17 0 013 4.08a1 1 0 011-1h3.61a1 1 0 011 1 11.72 11.72 0 00.58 3.66 1 1 0 01-.24 1.01l-2.33 2.04z"/></svg></a>
-<a href="https://wa.me/971507751565?text=Hello%20Al%20Quoz%20Elite!%20I%20need%20urgent%20help%20with%20my%20%5BElectrical%20%2F%20Plumbing%5D%20issue%20in%20Al%20Quoz%2C%20Dubai.%20Please%20send%20a%20technician%20as%20soon%20as%20possible.%20Thank%20you!" class="float-btn float-wa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.015a9.868 9.868 0 01-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374A9.86 9.86 0 012.15 12.01C2.15 6.558 6.587 2.122 12.05 2.122a9.835 9.835 0 016.975 2.89 9.825 9.825 0 012.888 6.975c-.003 5.453-4.437 9.884-9.885 9.884l.018-.086zM12.05.122C5.495.122.15 5.456.15 12.01a11.83 11.83 0 001.588 5.945L.057 24l6.19-1.623a11.85 11.85 0 005.683 1.449h.12c6.555 0 11.9-5.335 11.9-11.889A11.834 11.834 0 0012.05.122z"/></svg></a>
+    <a href="tel:+971507751565" class="float-btn float-call" aria-label="Call Now">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.72 11.72 0 003.66.58 1 1 0 011 1v3.61a1 1 0 01-1 1A17 17 0 013 4.08a1 1 0 011-1h3.61a1 1 0 011 1 11.72 11.72 0 00.58 3.66 1 1 0 01-.24 1.01l-2.33 2.04z"/></svg>
+    </a>
+    <a href="https://wa.me/971507751565?text=Hello%20Al%20Quoz%20Elite!%20I%20need%20urgent%20help%20with%20my%20%5BElectrical%20%2F%20Plumbing%5D%20issue%20in%20Al%20Quoz%2C%20Dubai.%20Please%20send%20a%20technician%20as%20soon%20as%20possible.%20Thank%20you!" class="float-btn float-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.015a9.868 9.868 0 01-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374A9.86 9.86 0 012.15 12.01C2.15 6.558 6.587 2.122 12.05 2.122a9.835 9.835 0 016.975 2.89 9.825 9.825 0 012.888 6.975c-.003 5.453-4.437 9.884-9.885 9.884l.018-.086zM12.05.122C5.495.122.15 5.456.15 12.01a11.83 11.83 0 001.588 5.945L.057 24l6.19-1.623a11.85 11.85 0 005.683 1.449h.12c6.555 0 11.9-5.335 11.9-11.889A11.834 11.834 0 0012.05.122z"/></svg>
+    </a>
 </div>
 
 <!-- Intersection Observer for fade-in -->
 <script>
-document.addEventListener('DOMContentLoaded',()=>{const o=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');o.unobserve(e.target)}})},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.fade-in').forEach(el=>o.observe(el))});
+document.addEventListener('DOMContentLoaded',()=>{
+    const o=new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+            if(e.isIntersecting){
+                e.target.classList.add('visible');
+                o.unobserve(e.target);
+            }
+        });
+    },{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+    document.querySelectorAll('.fade-in').forEach(el=>o.observe(el));
+});
 </script>
 </body>
 </html>
