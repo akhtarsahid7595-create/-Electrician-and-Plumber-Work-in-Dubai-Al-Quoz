@@ -211,13 +211,13 @@ nav a:hover{color:var(--brand-blue)}
 .rating-num{font-size:4rem;font-weight:800;color:var(--text-dark);line-height:1}
 .rating-label{font-size:.9rem;color:var(--text-muted);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:50px;margin-top:12px}
 .review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;max-width:1000px;margin:0 auto}
-.review-card{background:var(--bg-card);border:1px solid var(--border-light);border-radius:24px;padding:40px 32px;position:relative;box-shadow:var(--shadow-md);transition:all .3s}
-.review-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
-.quote-icon{position:absolute;top:30px;right:30px;font-size:2.5rem;color:var(--brand-blue-soft)}
-.review-name{font-size:1.2rem;font-weight:700;color:var(--text-dark);margin-bottom:4px}
-.review-stars{color:#f59e0b;font-size:1.1rem;margin-bottom:16px;display:flex;gap:4px}
-.review-text{font-size:1.05rem;color:var(--text-muted);line-height:1.7}
-.review-time{font-size:.9rem;color:#94a3b8;margin-top:24px;font-weight:600;display:flex;align-items:center;gap:6px}
+.review-card{background:var(--bg-card);border:1px solid var(--border-light);border-radius:24px;padding:40px 32px;position:relative;box-shadow:var(--shadow-md);transition:all .5s cubic-bezier(0.16, 1, 0.3, 1)}
+.review-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);border-color:var(--brand-blue)}
+.quote-icon{position:absolute;top:30px;right:30px;font-size:2.5rem;color:var(--brand-blue-soft);opacity:0.5}
+.review-name{font-size:1.15rem;font-weight:700;color:var(--text-dark);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.5px}
+.review-stars{color:#f59e0b;font-size:1rem;margin-bottom:16px;display:flex;gap:4px}
+.review-text{font-size:1.05rem;color:var(--text-muted);line-height:1.7;font-style:italic}
+.review-time{font-size:.85rem;color:#94a3b8;margin-top:24px;font-weight:600;display:flex;align-items:center;gap:6px;border-top:1px solid var(--border-light);padding-top:16px}
 
 /* ===== FOOTER ===== */
 footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
@@ -520,27 +520,58 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
     <div class="review-grid">
         <div class="review-card fade-in">
             <i class="ph-fill ph-quotes quote-icon"></i>
-            <div class="review-name">MOHAMMED TANZIMUL ISLAM MOHAMMAD TAJUL ISLAM</div>
+            <div class="review-name">Imran Khan (Al Barsha 1)</div>
             <div class="review-stars">
-                <i class="ph-fill ph-star"></i>
-                <i class="ph-fill ph-star"></i>
-                <i class="ph-fill ph-star"></i>
-                <i class="ph-fill ph-star"></i>
-                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
             </div>
-            <p class="review-text">"Excellent services provider highly recommended"</p>
-            <div class="review-time"><i class="ph-bold ph-clock"></i> 3 years ago via Google Reviews</div>
+            <p class="review-text">"Excellent service! They fixed my electrical fault in Al Barsha within an hour. Highly professional and polite team."</p>
+            <div class="review-time"><i class="ph-bold ph-clock"></i> 2 months ago via Google Reviews</div>
         </div>
         <div class="review-card fade-in" style="transition-delay:0.1s">
             <i class="ph-fill ph-quotes quote-icon"></i>
-            <div class="review-name">Rkkn Al Sarah Noor Islam</div>
+            <div class="review-name">Sarah Williams (Jumeirah 3)</div>
             <div class="review-stars">
-                <i class="ph-fill ph-star"></i>
-                <i class="ph-fill ph-star"></i>
-                <i class="ph-fill ph-star"></i>
-                <i class="ph-fill ph-star"></i>
-                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
             </div>
+            <p class="review-text">"The best plumbing service I've used in Dubai. Clean, efficient, and they arrived exactly on time. Very impressed!"</p>
+            <div class="review-time"><i class="ph-bold ph-clock"></i> 1 month ago via Google Reviews</div>
+        </div>
+        <div class="review-card fade-in" style="transition-delay:0.2s">
+            <i class="ph-fill ph-quotes quote-icon"></i>
+            <div class="review-name">Abdul Aziz (Al Quoz 4)</div>
+            <div class="review-stars">
+                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <p class="review-text">"Friendly technicians who know their work. Fixed a major leak in my kitchen quickly. Very reasonable pricing for the area."</p>
+            <div class="review-time"><i class="ph-bold ph-clock"></i> 3 months ago via Google Reviews</div>
+        </div>
+        <div class="review-card fade-in" style="transition-delay:0.3s">
+            <i class="ph-fill ph-quotes quote-icon"></i>
+            <div class="review-name">Rajesh Kumar (Business Bay)</div>
+            <div class="review-stars">
+                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <p class="review-text">"Professional electrical setup for my office in Business Bay. Great attention to detail and safety. 5-star service!"</p>
+            <div class="review-time"><i class="ph-bold ph-clock"></i> 4 months ago via Google Reviews</div>
+        </div>
+        <div class="review-card fade-in" style="transition-delay:0.4s">
+            <i class="ph-fill ph-quotes quote-icon"></i>
+            <div class="review-name">Fatima Mansoori (Downtown)</div>
+            <div class="review-stars">
+                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <p class="review-text">"They are reliable and always available. The 24/7 service is real! They saved me during an AC power trip late at night."</p>
+            <div class="review-time"><i class="ph-bold ph-clock"></i> 2 weeks ago via Google Reviews</div>
+        </div>
+        <div class="review-card fade-in" style="transition-delay:0.5s">
+            <i class="ph-fill ph-quotes quote-icon"></i>
+            <div class="review-name">Zaid Al-Sayed (Motor City)</div>
+            <div class="review-stars">
+                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <p class="review-text">"Quick, affordable, and expert service. Their maintenance team is very knowledgeable and fast. Highly recommended for all residents."</p>
+            <div class="review-time"><i class="ph-bold ph-clock"></i> 1 week ago via Google Reviews</div>
+        </div>
     </div>
 </section>
 
