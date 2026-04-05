@@ -113,6 +113,12 @@ header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:20px 40px;dis
 nav a{color:var(--text-dark);font-size:.9rem;font-weight:600;margin-left:32px;transition:color .3s}
 nav a:hover{color:var(--brand-blue)}
 
+/* BRAND LOGO TEXT */
+.logo{display:flex;align-items:center;gap:12px;cursor:pointer}
+.brand-text{display:flex;flex-direction:column;line-height:1.2}
+.brand-name{font-size:1.15rem;font-weight:800;color:var(--text-dark);letter-spacing:-0.02em}
+.brand-city{font-size:0.75rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+
 /* ===== HERO ===== */
 .hero{min-height:100vh;display:flex;align-items:center;padding:140px 40px 80px;position:relative;background:var(--bg-body);overflow:hidden}
 .hero-inner{max-width:1300px;margin:0 auto;width:100%;display:flex;align-items:center;gap:60px;position:relative;z-index:1}
@@ -253,7 +259,13 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
 <!-- Fixed Header -->
 <header>
     <div class="logo-wrap">
-        <a href="#hero" class="logo"><img src="images/logo.png?v=2.0" alt="Electrician & Plumber Work Dubai Logo" style="height:64px;width:auto"></a>
+        <a href="#hero" class="logo">
+            <img src="images/favicon.png?v=1.0" alt="Dubai Facility Services Icon" style="height:45px;width:auto;border-radius:10px">
+            <div class="brand-text">
+                <span class="brand-name">Electrician & Plumber Work</span>
+                <span class="brand-city">Dubai Al Quoz</span>
+            </div>
+        </a>
     </div>
     <div style="display:flex;align-items:center;gap:30px">
         <nav>
