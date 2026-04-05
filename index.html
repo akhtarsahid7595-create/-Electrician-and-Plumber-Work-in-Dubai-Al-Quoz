@@ -175,11 +175,14 @@ nav a:hover{color:var(--brand-blue)}
 /* ===== WHY CHOOSE US ===== */
 .why{background:var(--bg-card)}
 .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;max-width:1200px;margin:0 auto}
-.why-card{background:var(--bg-body);border:1px solid var(--border-light);border-radius:20px;padding:40px 30px;position:relative;transition:all .3s}
-.why-card:hover{border-color:var(--brand-blue);box-shadow:var(--shadow-md)}
+.why-card{background:var(--bg-body);border:1px solid var(--border-light);border-radius:24px;padding:32px;position:relative;transition:all .5s cubic-bezier(0.16, 1, 0.3, 1);overflow:hidden;display:flex;flex-direction:column}
+.why-card:hover{border-color:var(--brand-blue);box-shadow:var(--shadow-lg);background:var(--bg-card);transform:translateY(-8px)}
 .why-icon{width:56px;height:56px;background:var(--bg-card);color:var(--brand-blue);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin-bottom:24px;box-shadow:var(--shadow-sm);border:1px solid var(--border-light)}
-.why-title{font-size:1.3rem;margin-bottom:12px}
-.why-desc{font-size:1rem;line-height:1.6}
+.why-title{font-size:1.3rem;margin-bottom:12px;color:var(--text-dark)}
+.why-desc{font-size:0.95rem;line-height:1.6;color:var(--text-muted)}
+.why-img-wrap{width:100%;height:200px;overflow:hidden;border-radius:16px;margin-bottom:24px;border:1px solid var(--border-light)}
+.why-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease}
+.why-card:hover .why-img-wrap img{transform:scale(1.1)}
 
 /* ===== EMERGENCY CTA ===== */
 .cta-band{background:var(--brand-blue-dark);padding:100px 40px;text-align:center;position:relative}
@@ -387,32 +390,32 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
     </div>
     <div class="why-grid">
         <div class="why-card fade-in">
-            <div class="why-icon">
-                <i class="ph-duotone ph-clock"></i>
+            <div class="why-img-wrap">
+                <img src="images/service_247.png" alt="24/7 Emergency Support Dubai">
             </div>
             <h3 class="why-title">Open 24/7 (All Days)</h3>
             <p class="why-desc">We are open 24 hours a day, 7 days a week (Including Fridays), ensuring you always have support during any emergency in Al Quoz and surrounding areas.</p>
         </div>
         <div class="why-card fade-in" style="transition-delay:0.1s">
-            <div class="why-icon">
-                <i class="ph-duotone ph-currency-dollar"></i>
+            <div class="why-img-wrap">
+                <img src="images/pricing_transparent.png" alt="Transparent Pricing Dubai">
             </div>
             <h3 class="why-title">Transparent Pricing</h3>
-            <p class="why-desc">No hidden fees or surprise charges. We provide upfront, honest quotes before any tools touch your property.</p>
+            <p class="why-desc">No hidden fees or surprise charges. We provide upfront, honest quotes before any tools touch your property, ensuring complete peace of mind.</p>
         </div>
         <div class="why-card fade-in" style="transition-delay:0.2s">
-            <div class="why-icon">
-                <i class="ph-duotone ph-map-pin-line"></i>
+            <div class="why-img-wrap">
+                <img src="images/local_experts.png" alt="Local Experts Dubai Al Quoz">
             </div>
             <h3 class="why-title">Local Experts</h3>
-            <p class="why-desc">Based centrally in Al Khalidiya District, Al Quoz 4, we provide rapid response services to our community.</p>
+            <p class="why-desc">Based centrally in Al Khalidiya District, Al Quoz 4, we provide rapid response services to our community with localized expertise.</p>
         </div>
         <div class="why-card fade-in" style="transition-delay:0.3s">
-            <div class="why-icon">
-                <i class="ph-duotone ph-star"></i>
+            <div class="why-img-wrap">
+                <img src="images/google_verified.png" alt="Google Verified 5-Star Reviews">
             </div>
             <h3 class="why-title">Google Verified</h3>
-            <p class="why-desc">We maintain a perfect 5.0-star rating from real customers who trust our prompt and effective service.</p>
+            <p class="why-desc">We maintain a perfect 5.0-star rating from real customers who trust our prompt, effective, and professional maintenance service.</p>
         </div>
     </div>
 </section>
