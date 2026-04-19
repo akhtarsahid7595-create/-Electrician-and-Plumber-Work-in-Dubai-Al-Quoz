@@ -1,0 +1,5 @@
+# Robots.txt for Dubai Plumber Electrician
+User-agent: *
+Allow: /
+
+Sitemap: https://dubaiplumberelectrician.com/sitemap.xml

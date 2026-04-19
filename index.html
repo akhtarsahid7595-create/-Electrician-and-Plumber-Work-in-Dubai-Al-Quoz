@@ -3,47 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Best 24/7 Electrician & Plumber in Al Quoz, Dubai | Emergency Service</title>
-<meta name="description" content="Expert 24/7 electricians and plumbers in Al Quoz 4, Dubai. Available every day, including Fridays. Call +971 50 775 1565 for fast, reliable, and affordable emergency repairs.">
-<meta name="keywords" content="24/7 Electrician Dubai, Emergency Plumber Al Quoz, Al Quoz 4 electrician, 24 hour plumber Dubai, electrical repairs Al Quoz, plumbing services Dubai">
-<link rel="icon" type="image/png" href="images/favicon.png?v=1.0">
-<link rel="shortcut icon" type="image/png" href="images/favicon.png?v=1.0">
-<meta name="author" content="Dubai Facility Services">
+<link rel="canonical" href="https://dubaiplumberelectrician.com/">
+<meta name="google-site-verification" content="YOUR_GSC_CODE_HERE" />
+<title>Emergency Plumber & Electrician Al Quoz, Dubai | 24/7 Service</title>
+<meta name="description" content="Need an emergency plumber or electrician in Al Quoz, Dubai? Dubai Plumber Electrician offers rapid 24/7 electrical wiring, leak repair, and maintenance. Licensed experts, 30-min response. Call +971 50 775 1565.">
+<meta name="keywords" content="emergency plumber Al Quoz, 24/7 electrician Dubai, electrical repair Al Quoz 4, plumber near me Al Quoz, emergency maintenance Dubai, unlicensed electrical repair, DB board tripping Dubai, water heater repair Al Quoz">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+<meta name="author" content="Dubai Plumber Electrician">
 <meta name="robots" content="index, follow">
 
 <!-- Open Graph / Meta -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Expert Electrician & Plumber in Al Quoz, Dubai">
-<meta property="og:description" content="Top-rated expert electricians and plumbers in Al Quoz 4, Dubai. Available 24 hours (Closed Fridays). Call +971 50 775 1565.">
-<meta property="og:image" content="images/hero.png">
+<meta property="og:title" content="Expert Electrician & Plumber | Dubai Plumber Electrician">
+<meta property="og:description" content="Dubai Plumber Electrician offers top-rated expert electricians and plumbers across Dubai. Available 24 hours. Call +971 50 775 1565.">
+<meta property="og:image" content="images/logo_new.png">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Expert Electrician & Plumber in Al Quoz, Dubai">
-<meta name="twitter:description" content="Top-rated expert electricians and plumbers in Al Quoz 4, Dubai. Available 24 hours (Closed Fridays). Call +971 50 775 1565.">
-<meta name="twitter:image" content="images/hero.png">
+<meta name="twitter:title" content="Expert Electrician & Plumber | Dubai Plumber Electrician">
+<meta name="twitter:description" content="Dubai Plumber Electrician offers top-rated expert electricians and plumbers across Dubai. Available 24 hours. Call +971 50 775 1565.">
+<meta name="twitter:image" content="images/logo_new.png">
 
 <!-- Schema.org LocalBusiness Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Dubai Facility Services - 24/7 Electrician & Plumber",
-  "image": "images/logo.png",
-  "@id": "https://dubaifacilityservices.ae",
-  "url": "https://dubaifacilityservices.ae",
+  "name": "Dubai Plumber Electrician",
+  "image": "images/logo_new.png",
+  "@id": "https://dubaiplumberelectrician.com",
+  "url": "https://dubaiplumberelectrician.com",
   "telephone": "+971507751565",
+  "description": "Licensed 24/7 emergency plumbers and electricians in Al Quoz, Dubai. We provide rapid-response maintenance for DB boards, plumbing leaks, and electrical wiring.",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Al Khalidiya District",
-    "addressLocality": "Al Quoz 4",
+    "streetAddress": "3 9a St, Al Quoz Industrial Area 4",
+    "addressLocality": "Al Quoz",
     "addressRegion": "Dubai",
     "addressCountry": "AE"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 25.1325,
-    "longitude": 55.2458
+    "latitude": 25.1262,
+    "longitude": 55.2315
   },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
@@ -51,8 +54,16 @@
     "opens": "00:00",
     "closes": "23:59"
   },
-  "areaServed": ["Al Quoz", "Al Barsha", "Jumeirah", "Downtown Dubai", "Dubai Marina"],
-  "priceRange": "$$",
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 25.1262,
+        "longitude": 55.2315
+    },
+    "geoRadius": "25000"
+  },
+  "priceRange": "AED",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
@@ -134,6 +145,19 @@ nav a:hover{color:var(--brand-blue)}
 @media(max-width:900px){
     .location-grid{grid-template-columns:1fr;gap:40px}
     .map-wrap{height:400px}
+}
+
+/* ===== MOBILE MENU ===== */
+.menu-toggle{display:none;background:none;border:none;color:var(--text-dark);font-size:2rem;cursor:pointer;padding:8px;z-index:1100}
+#nav-menu{position:fixed;top:0;right:0;width:300px;height:100vh;background:#ffffff;flex-direction:column;align-items:flex-start;padding:120px 40px;gap:20px;box-shadow:-10px 0 30px rgba(0,0,0,0.1);transform:translateX(100%);transition:transform .4s cubic-bezier(0.16, 1, 0.3, 1);z-index:1050;display:flex;visibility:hidden}
+#nav-menu.active{transform:translateX(0);visibility:visible}
+#nav-menu a{margin:0;font-size:1.1rem;width:100%;padding:15px 0;border-bottom:1px solid var(--border-light);display:block;color:var(--text-dark);font-weight:700}
+.menu-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:1040;display:none;backdrop-filter:blur(4px)}
+.menu-overlay.active{display:block}
+
+@media(max-width:900px){
+    .menu-toggle{display:block}
+    .badge-24{display:none}
 }
 
 /* ===== HERO ===== */
@@ -257,7 +281,6 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
     .hero-right{margin-top:40px}
     .floating-badge{padding:12px 20px;font-size:1rem;bottom:-15px;left:-10px}
     .cta-band{padding:80px 20px}
-    nav{display:none}
 }
 @media(max-width:600px){
     .stats-bar{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:30px;border:none;padding-top:20px}
@@ -266,8 +289,12 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
     .footer-grid{grid-template-columns:1fr;gap:40px}
     .floating-btns{bottom:20px;right:20px}
     .float-btn{width:56px;height:56px}
-    .hero h1{font-size:2.5rem}
+    .hero h1{font-size:2.4rem}
+    .hero-sub{font-size:1rem}
     .logo{font-size:1rem}
+    .brand-name{font-size:1rem}
+    .brand-city{font-size:0.6rem}
+    section{padding:60px 20px}
 }
 .hours-list li {display:flex; justify-content:space-between; width:100%; border-bottom:1px dashed rgba(255,255,255,0.1); padding-bottom:12px;}
 .hours-list li:last-child {border-bottom:none;}
@@ -280,33 +307,40 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
 <header>
     <div class="logo-wrap">
         <a href="#hero" class="logo">
-            <img src="images/favicon.png?v=1.0" alt="Dubai Facility Services Icon" style="height:45px;width:auto;border-radius:10px">
+            <img src="images/logo_new.png" alt="Dubai Plumber Electrician Logo" style="height:65px;width:auto;border-radius:12px">
             <div class="brand-text">
-                <span class="brand-name">Electrician & Plumber Work</span>
-                <span class="brand-city">Dubai Al Quoz</span>
+                <span class="brand-name">Dubai Plumber Electrician</span>
+                <span class="brand-city">Premium Maintenance Services</span>
             </div>
         </a>
     </div>
-    <div style="display:flex;align-items:center;gap:30px">
-        <nav>
-            <a href="#services">Services</a>
-            <a href="#why">Why Us</a>
-            <a href="#areas">Areas</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#faq">FAQ</a>
-            <a href="#location">Find Us</a>
-        </nav>
+    <div style="display:flex;align-items:center;gap:20px">
         <div class="badge-24"><span class="blink-dot"></span> 24/7 Emergency Service</div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+            <i class="ph-bold ph-list"></i>
+        </button>
     </div>
 </header>
+
+<div class="menu-overlay" id="menu-overlay"></div>
+<nav id="nav-menu">
+    <a href="#services">Services</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#blog">Expert Insights</a>
+    <a href="#why">Why Us</a>
+    <a href="#areas">Areas</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#faq">FAQ</a>
+    <a href="#location">Find Us</a>
+</nav>
 
 <!-- Hero -->
 <section class="hero" id="hero">
     <div class="hero-inner">
         <div class="hero-left fade-in">
-            <div class="section-badge"><i class="ph-bold ph-star" style="margin-right:4px;"></i> Dubai United Arab Emirates</div>
-            <h1>Expert <span>Electrical<br>& Plumbing</span></h1>
-            <p class="hero-sub">Providing top-tier 24/7 Electrician and Plumber work across Al Quoz 4 and all of Dubai. Our expert technicians are ready every single day, including Fridays, for emergency maintenance and repairs.</p>
+            <div class="section-badge"><i class="ph-bold ph-map-pin" style="margin-right:4px;"></i> Expert 24/7 Local Support in Al Quoz 4, Dubai</div>
+            <h1>#1 Emergency <span>Plumber<br>& Electrician</span> in Al Quoz</h1>
+            <p class="hero-sub">Dubai Plumber Electrician is the first choice for Al Quoz residents needing urgent 24/7 electrical and plumbing repairs. Our licensed technicians provide a 30-minute rapid response for everything from power outages to burst pipes in Al Quoz 4 and beyond.</p>
             <div class="stats-bar">
                 <div class="stat"><div class="stat-num">5.0</div><div class="stat-label">Google Rating</div></div>
                 <div class="stat"><div class="stat-num">24/7</div><div class="stat-label">Always Open</div></div>
@@ -315,7 +349,7 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
         </div>
         <div class="hero-right">
             <div class="image-wrapper fade-in" style="transition-delay:0.2s">
-                <img src="images/hero.png" alt="Premium Electricians Dubai" class="hero-img">
+                <img src="images/hero.png" alt="24/7 Emergency Electrician and Plumber in Al Quoz 4 Dubai" class="hero-img">
                 <div class="floating-badge">
                     <i class="ph-fill ph-check-circle"></i> Service Ready
                 </div>
@@ -327,18 +361,18 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
 <!-- Services -->
 <section class="services" id="services">
     <div class="section-header fade-in">
-        <div class="section-badge">Our Solutions</div>
-        <h2 class="section-title">Comprehensive Services</h2>
+        <div class="section-badge">Service Catalog</div>
+        <h2 class="section-title">Emergency Electrical & Plumbing in Al Quoz</h2>
     </div>
     <div class="svc-grid">
         <div class="svc-card active border-blue fade-in">
-            <img src="images/electrical.png" alt="Emergency Electrical Repair Dubai Al Quoz" class="svc-img">
+            <img src="images/electrical.png" alt="Emergency Electrician Al Quoz 4 Dubai - DB Board Repair" class="svc-img">
             <div class="svc-body">
                 <div class="svc-icon-wrap icon-sq-orange">
                     <i class="ph-duotone ph-lightning"></i>
                 </div>
-                <h3 class="svc-name">Electrical Works</h3>
-                <p class="svc-desc">Complete electrical solutions for residential and commercial properties.</p>
+                <h3 class="svc-name">Professional Electrical Works</h3>
+                <p class="svc-desc">Complete residential and commercial electrical solutions by licensed electricians in Dubai.</p>
                 <ul class="svc-list">
                     <li><i class="ph-bold ph-check"></i> Full Wiring & Rewiring</li>
                     <li><i class="ph-bold ph-check"></i> DB Board Installation</li>
@@ -348,13 +382,13 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
             </div>
         </div>
         <div class="svc-card fade-in" style="transition-delay:0.1s">
-            <img src="images/plumbing.png" alt="Professional Plumbing Services Dubai" class="svc-img">
+            <img src="images/plumbing.png" alt="24/7 Emergency Plumber Al Quoz Dubai - Pipe Leak Repair" class="svc-img">
             <div class="svc-body">
                 <div class="svc-icon-wrap icon-sq-purple">
                     <i class="ph-duotone ph-wrench"></i>
                 </div>
-                <h3 class="svc-name">Plumbing Works</h3>
-                <p class="svc-desc">Expert plumbing repairs and installations with guaranteed quality.</p>
+                <h3 class="svc-name">Expert Plumbing Services</h3>
+                <p class="svc-desc">Reliable plumbing repairs, installations, and leak detection with guaranteed quality in Al Quoz.</p>
                 <ul class="svc-list">
                     <li><i class="ph-bold ph-check"></i> Leak Detection & Repair</li>
                     <li><i class="ph-bold ph-check"></i> Drain Cleaning & Unclogging</li>
@@ -364,7 +398,7 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
             </div>
         </div>
         <div class="svc-card fade-in" style="transition-delay:0.2s">
-            <img src="images/amc.png" alt="24/7 Emergency Maintenance Al Quoz" class="svc-img">
+            <img src="images/amc.png" alt="24/7 Emergency Maintenance Services Al Quoz Dubai" class="svc-img">
             <div class="svc-body">
                 <div class="svc-icon-wrap icon-sq-brand">
                     <i class="ph-duotone ph-siren"></i>
@@ -382,23 +416,81 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
     </div>
 </section>
 
+
+<!-- Expert Maintenance Solutions (Content Depth) -->
+<section class="solutions" id="solutions" style="background:var(--bg-card)">
+    <div class="section-header fade-in">
+        <div class="section-badge">Local Expertise</div>
+        <h2 class="section-title">Maintenance Solutions for Dubai Homes</h2>
+    </div>
+    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px" class="fade-in">
+        <div class="solution-item">
+            <h3 style="color:var(--text-dark);margin-bottom:15px;display:flex;align-items:center;gap:10px"><i class="ph-bold ph-thermometer-hot" style="color:var(--brand-orange)"></i> Handling Dubai Heat</h3>
+            <p style="font-size:1rem;line-height:1.7;color:var(--text-muted)">The extreme summer temperatures in Al Quoz and across Dubai put immense pressure on electrical systems and water heaters. Our technicians are specialized in heavy-duty wiring and AC power troubleshooting to prevent fire hazards and power trips during peak heat months.</p>
+        </div>
+        <div class="solution-item">
+            <h3 style="color:var(--text-dark);margin-bottom:15px;display:flex;align-items:center;gap:10px"><i class="ph-bold ph-drop" style="color:var(--brand-blue)"></i> Advanced Leak Detection</h3>
+            <p style="font-size:1rem;line-height:1.7;color:var(--text-muted)">Water is a precious resource in the UAE. Tiny leaks in your plumbing can lead to massive DEWA bills and structural damage. We use non-invasive acoustic leak detection technology to find hidden pipe bursts in Al Quoz warehouses and residential villas without breaking your walls.</p>
+        </div>
+        <div class="solution-item">
+            <h3 style="color:var(--text-dark);margin-bottom:15px;display:flex;align-items:center;gap:10px"><i class="ph-bold ph-shield-check" style="color:#22c55e"></i> DEWA Standards Compliance</h3>
+            <p style="font-size:1rem;line-height:1.7;color:var(--text-muted)">All our electrical work follows strict DEWA (Dubai Electricity & Water Authority) regulations. From DB board dressing to proper earthing, we ensure your property passes safety inspections and operates at maximum efficiency.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Expert Insights Section (Blog) -->
+<section class="blog" id="blog" style="background:var(--bg-body)">
+    <div class="section-header fade-in">
+        <div class="section-badge">Maintenance Blog</div>
+        <h2 class="section-title">Expert Insights & Tips</h2>
+        <p style="margin-top:15px;color:var(--text-muted)">Deep dives into electrical and plumbing care for the Dubai climate.</p>
+    </div>
+    <div class="svc-grid">
+        <div class="svc-card fade-in">
+            <img src="images/hero.png" alt="Electrical Safety Guide Dubai" class="svc-img" style="height:200px">
+            <div class="svc-body">
+                <h3 class="svc-name" style="font-size:1.2rem">Electrical Safety in Dubai's Heat</h3>
+                <p class="svc-desc">Avoid power trips and fire hazards. A complete guide for Al Quoz residents.</p>
+                <a href="blog/electrical-safety-dubai.html" style="color:var(--brand-blue);font-weight:700;display:flex;align-items:center;gap:8px">Read Guide <i class="ph-bold ph-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="svc-card fade-in" style="transition-delay:0.1s">
+            <img src="images/plumbing.png" alt="Plumbing Maintenance Al Quoz" class="svc-img" style="height:200px">
+            <div class="svc-body">
+                <h3 class="svc-name" style="font-size:1.2rem">Al Quoz Plumbing Survival Guide</h3>
+                <p class="svc-desc">Master leak detection and prevent common pipe issues in industrial areas.</p>
+                <a href="blog/plumbing-survival-guide-al-quoz.html" style="color:var(--brand-blue);font-weight:700;display:flex;align-items:center;gap:8px">Read Guide <i class="ph-bold ph-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="svc-card fade-in" style="transition-delay:0.2s">
+            <img src="images/service_247.png" alt="Professional Maintenance Dubai" class="svc-img" style="height:200px">
+            <div class="svc-body">
+                <h3 class="svc-name" style="font-size:1.2rem">Why 24/7 Support Matters</h3>
+                <p class="svc-desc">Learn why professional rapid response is the key to property longevity in UAE.</p>
+                <a href="blog/pro-maintenance-benefits.html" style="color:var(--brand-blue);font-weight:700;display:flex;align-items:center;gap:8px">Read Guide <i class="ph-bold ph-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Why Choose Us -->
 <section class="why" id="why">
     <div class="section-header fade-in">
-        <div class="section-badge">The Difference</div>
-        <h2 class="section-title">Why Trust Us?</h2>
+        <div class="section-badge">The Advantage</div>
+        <h2 class="section-title">Why Choose Our Al Quoz Team?</h2>
     </div>
     <div class="why-grid">
         <div class="why-card fade-in">
             <div class="why-img-wrap">
-                <img src="images/service_247.png" alt="24/7 Emergency Support Dubai">
+                <img src="images/service_247.png" alt="24/7 Emergency Plumber Electrician Support Dubai Al Quoz">
             </div>
             <h3 class="why-title">Open 24/7 (All Days)</h3>
             <p class="why-desc">We are open 24 hours a day, 7 days a week (Including Fridays), ensuring you always have support during any emergency in Al Quoz and surrounding areas.</p>
         </div>
         <div class="why-card fade-in" style="transition-delay:0.1s">
             <div class="why-img-wrap">
-                <img src="images/pricing_transparent.png" alt="Transparent Pricing Dubai">
+                <img src="images/pricing_transparent.png" alt="Transparent Pricing for Plumbing and Electrical Al Quoz">
             </div>
             <h3 class="why-title">Transparent Pricing</h3>
             <p class="why-desc">No hidden fees or surprise charges. We provide upfront, honest quotes before any tools touch your property, ensuring complete peace of mind.</p>
@@ -412,7 +504,7 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
         </div>
         <div class="why-card fade-in" style="transition-delay:0.3s">
             <div class="why-img-wrap">
-                <img src="images/google_verified.png" alt="Google Verified 5-Star Reviews">
+                <img src="images/google_verified.png" alt="5-Star Verified Maintenance Service in Al Quoz Dubai">
             </div>
             <h3 class="why-title">Google Verified</h3>
             <p class="why-desc">We maintain a perfect 5.0-star rating from real customers who trust our prompt, effective, and professional maintenance service.</p>
@@ -430,7 +522,7 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
                 <i class="ph-fill ph-phone-call"></i> 
                 Call Now — +971 50 775 1565
             </a>
-            <a href="https://wa.me/971507751565?text=Hello%20Electrician%20and%20Plumber%20Work!%20I%20need%20urgent%20help%20with%20my%20%5BElectrical%20%2F%20Plumbing%5D%20issue%20in%20Dubai.%20Please%20send%20a%20technician%20as%20soon%20as%20possible.%20Thank%20you!" class="btn-wa" target="_blank" rel="noopener">
+            <a href="https://wa.me/971507751565?text=Hello%20Dubai%20Plumber%20Electrician!%20I%20need%20urgent%20help%20with%20my%20%5BElectrical%20%2F%20Plumbing%5D%20issue%20in%20Dubai.%20Please%20send%20a%20technician%20as%20soon%20as%20possible.%20Thank%20you!" class="btn-wa" target="_blank" rel="noopener">
                 <i class="ph-fill ph-whatsapp-logo"></i> 
                 WhatsApp Us
             </a>
@@ -441,8 +533,11 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
 <!-- Areas We Cover -->
 <section class="areas" id="areas">
     <div class="section-header fade-in">
-        <div class="section-badge">Location Profile</div>
-        <h2 class="section-title">Areas We Serve</h2>
+        <div class="section-badge">Coverage Map</div>
+        <h2 class="section-title">Emergency Support Across Dubai</h2>
+    </div>
+    <div style="max-width:900px;margin:0 auto 40px;text-align:center;line-height:1.8">
+        <p>While we are centrally located in <strong>Al Quoz 4</strong>, our mobile maintenance teams are strategically positioned to provide rapid 24/7 electrical and plumbing support across all major residential and commercial hubs in Dubai. Whether you have a burst pipe in Al Barsha or a power outage in Downtown, our technicians are just a call away.</p>
     </div>
     <div class="area-cloud fade-in">
         <span class="area-tag featured"><i class="ph-fill ph-map-pin"></i> Al Quoz</span>
@@ -469,8 +564,8 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
 <section class="location" id="location">
     <div class="location-grid">
         <div class="loc-content fade-in">
-            <div class="section-badge">Our Office</div>
-            <h2 class="section-title">Visit Our Location</h2>
+            <div class="section-badge">Local Presence</div>
+            <h2 class="section-title">Find Our Al Quoz 4 Center</h2>
             <p>We are centrally located in Al Quoz 4, allowing us to provide rapid response services across the entire Dubai region.</p>
             
             <div class="loc-info">
@@ -506,8 +601,8 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
 <!-- Google Reviews -->
 <section class="reviews" id="reviews">
     <div class="section-header fade-in">
-        <div class="section-badge">Testimonials</div>
-        <h2 class="section-title">What Locals Say</h2>
+        <div class="section-badge">Client Trust</div>
+        <h2 class="section-title">What Al Quoz Residents Say</h2>
         <div style="margin-top:20px">
             <div class="stars">
                 <i class="ph-fill ph-star"></i>
@@ -581,8 +676,8 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
 <!-- FAQ Section -->
 <section class="faq" id="faq" style="background:var(--bg-body)">
     <div class="section-header fade-in">
-        <div class="section-badge">Help Center</div>
-        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="section-badge">Local Help</div>
+        <h2 class="section-title">Al Quoz Maintenance FAQ</h2>
     </div>
     <div style="max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:20px" class="fade-in">
         <div style="background:var(--bg-card);padding:24px;border-radius:16px;border:1px solid var(--border-light)">
@@ -634,16 +729,16 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
 <footer>
     <div class="footer-grid">
         <div class="footer-brand">
-            <div class="logo"><i class="ph-duotone ph-lightning"></i> Electrician & Plumber Work</div>
-            <p>Based in Al Quoz 4, Dubai. Providing rapid-response electrician and plumber services.</p>
+            <div class="logo"><i class="ph-duotone ph-lightning"></i> Dubai Plumber Electrician</div>
+            <p>Providing rapid-response electrician and plumber services across Dubai and Sharjah. Available 24/7 for all your maintenance needs.</p>
         </div>
         <div class="footer-col">
             <h4>Our Services</h4>
             <ul>
                 <li><i class="ph-bold ph-caret-right"></i> <a href="#services">Electrical Repairs</a></li>
                 <li><i class="ph-bold ph-caret-right"></i> <a href="#services">Pipe & Plumbing Work</a></li>
-                <li><i class="ph-bold ph-caret-right"></i> <a href="#services">DB Board & AC Electrical</a></li>
-                <li><i class="ph-bold ph-caret-right"></i> <a href="#services">Water Heater Service</a></li>
+                <li><i class="ph-bold ph-caret-right"></i> <a href="#blog">Maintenance Blog</a></li>
+                <li><i class="ph-bold ph-caret-right"></i> <a href="#solutions">Maintenance Tips</a></li>
                 <li><i class="ph-bold ph-caret-right"></i> <a href="#services">24 Hrs Emergency Teams</a></li>
             </ul>
         </div>
@@ -664,7 +759,7 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
         </div>
     </div>
     <div class="footer-bottom">
-        <p>© 2026 Electrician and Plumber Work in Dubai Al Quoz. All Rights Reserved.</p>
+        <p>© 2026 Dubai Plumber Electrician. All Rights Reserved.</p>
     </div>
 </footer>
 
@@ -673,7 +768,7 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
     <a href="tel:+971507751565" class="float-btn float-call" aria-label="Call Now">
         <i class="ph-fill ph-phone-call"></i>
     </a>
-    <a href="https://wa.me/971507751565?text=Hello%20Electrician%20and%20Plumber%20Work!%20I%20need%20urgent%20help%20with%20my%20%5BElectrical%20%2F%20Plumbing%5D%20issue%20in%20Dubai.%20Please%20send%20a%20technician%20as%20soon%20as%20possible.%20Thank%20you!" class="float-btn float-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <a href="https://wa.me/971507751565?text=Hello%20Dubai%20Plumber%20Electrician!%20I%20need%20urgent%20help%20with%20my%20%5BElectrical%20%2F%20Plumbing%5D%20issue%20in%20Dubai.%20Please%20send%20a%20technician%20as%20soon%20as%20possible.%20Thank%20you!" class="float-btn float-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
         <i class="ph-fill ph-whatsapp-logo"></i>
     </a>
 </div>
@@ -690,6 +785,37 @@ document.addEventListener('DOMContentLoaded',()=>{
         });
     },{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
     document.querySelectorAll('.fade-in').forEach(el=>o.observe(el));
+
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const menuOverlay = document.getElementById('menu-overlay');
+    const menuIcon = menuToggle.querySelector('i');
+
+    const toggleMenu = () => {
+        navMenu.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+        if (navMenu.classList.contains('active')) {
+            menuIcon.classList.replace('ph-list', 'ph-x');
+            document.body.style.overflow = 'hidden';
+        } else {
+            menuIcon.classList.replace('ph-x', 'ph-list');
+            document.body.style.overflow = '';
+        }
+    };
+
+    menuToggle.addEventListener('click', toggleMenu);
+    menuOverlay.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking links
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            menuIcon.classList.replace('ph-x', 'ph-list');
+            document.body.style.overflow = '';
+        });
+    });
 });
 </script>
 </body>
