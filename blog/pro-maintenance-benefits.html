@@ -53,8 +53,12 @@
 }
 </script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<!-- Preload Critical Logo -->
+<link rel="preload" href="../images/logo_new.png" as="image">
+<script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 <style>
     :root {
         --brand-blue: #2563eb;
@@ -132,7 +136,7 @@
 <body>
     <header>
         <a href="../index.html" class="logo">
-            <img src="../images/logo_new.png" alt="Logo" class="logo-img">
+            <img src="../images/logo_new.png" alt="Logo" class="logo-img" width="40" height="40">
             <span>Dubai Plumber Electrician</span>
         </a>
         <nav class="nav-links">

@@ -57,9 +57,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="../images/logo_new.png" as="image">
+    <link rel="preload" href="../images/emergency-maintenance-dubai.png" as="image">
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
     
     <style>
         /* Reusing main site styling for consistency */
@@ -225,7 +226,7 @@
 
 <header>
     <a href="../index.html" class="logo">
-        <img src="../images/logo_new.png" alt="Logo" class="logo-img">
+        <img src="../images/logo_new.png" alt="Logo" class="logo-img" width="40" height="40">
         <span>Dubai Plumber Electrician</span>
     </a>
     <nav class="nav-links">
@@ -254,7 +255,7 @@
 
 <div class="container">
     <!-- Replace the src with the local path if shifted, currently pointing to generated asset name for user to fix or using absolute for test -->
-    <img src="../images/emergency-maintenance-dubai.png" alt="Emergency maintenance technicians Dubai" class="featured-image">
+    <img src="../images/emergency-maintenance-dubai.png" alt="Emergency maintenance technicians Dubai" class="featured-image" width="1024" height="1024" fetchpriority="high">
 
     <div class="content">
         <p>Dubai is a city of superlatives—stunning skyscrapers, luxury villas, and a climate that pushes the limits of engineering. For homeowners and tenants in Al Quoz, Jumeirah, and across the UAE, maintaining a property isn’t just a matter of aesthetics; it’s a matter of safety and economic survival. The extreme heat of the Arabian summer, combined with high humidity and specific regulatory standards set by the <strong>Dubai Electricity and Water Authority (DEWA)</strong>, creates a unique maintenance landscape.</p>

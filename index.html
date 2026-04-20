@@ -103,8 +103,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- High-End Typography -->
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Preload Hero Image -->
+<link rel="preload" href="images/hero.png" as="image">
 <!-- Premium Phosphor Icons -->
-<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -150,6 +152,29 @@ header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:20px 40px;dis
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
 nav a{color:var(--text-dark);font-size:.9rem;font-weight:600;margin-left:32px;transition:color .3s}
 nav a:hover{color:var(--brand-blue)}
+
+/* DESKTOP NAV SPECIFIC */
+.nav-desktop {
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 1024px) {
+    .nav-desktop {
+        display: none;
+    }
+}
+.nav-desktop a {
+    margin-left: 24px;
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+.nav-desktop a:hover {
+    color: var(--brand-blue);
+    transform: translateY(-1px);
+}
 
 /* BRAND LOGO TEXT */
 .logo{display:flex;align-items:center;gap:12px;cursor:pointer}
@@ -298,6 +323,9 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
 .float-wa i{font-size:2.2rem;color:#ffffff}
 
 /* ===== RESPONSIVE ===== */
+@media(max-width:1024px){
+    header{padding:20px}
+}
 @media(max-width:900px){
     section{padding:80px 20px}
     header{padding:16px 20px}
@@ -334,13 +362,26 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
 <header>
     <div class="logo-wrap">
         <a href="#hero" class="logo">
-            <img src="images/logo_new.png" alt="Dubai Plumber Electrician Logo" style="height:65px;width:auto;border-radius:12px">
+            <img src="images/logo_new.png" alt="Dubai Plumber Electrician Logo" width="65" height="65" style="height:65px;width:auto;border-radius:12px">
             <div class="brand-text">
                 <span class="brand-name">Dubai Plumber Electrician</span>
                 <span class="brand-city">Premium Maintenance Services</span>
             </div>
         </a>
     </div>
+    
+    <!-- Desktop Menu -->
+    <nav class="nav-desktop">
+        <a href="#services">Services</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#blog">Insights</a>
+        <a href="#why">Why Us</a>
+        <a href="#areas">Areas</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#location">Contact</a>
+    </nav>
+
     <div style="display:flex;align-items:center;gap:20px">
         <div class="badge-24"><span class="blink-dot"></span> 24/7 Emergency Service</div>
         <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
@@ -376,7 +417,7 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
         </div>
         <div class="hero-right">
             <div class="image-wrapper fade-in" style="transition-delay:0.2s">
-                <img src="images/hero.png" alt="24/7 Emergency Electrician and Plumber in Al Quoz 4 Dubai" class="hero-img">
+                <img src="images/hero.png" alt="24/7 Emergency Electrician and Plumber in Al Quoz 4 Dubai" class="hero-img" width="640" height="640" fetchpriority="high">
                 <div class="floating-badge">
                     <i class="ph-fill ph-check-circle"></i> Service Ready
                 </div>
@@ -393,7 +434,7 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
     </div>
     <div class="svc-grid">
         <div class="svc-card active border-blue fade-in">
-            <img src="images/electrical.png" alt="Emergency Electrician Al Quoz 4 Dubai - DB Board Repair" class="svc-img">
+            <img src="images/electrical.png" alt="Emergency Electrician Al Quoz 4 Dubai - DB Board Repair" class="svc-img" width="640" height="640" loading="lazy">
             <div class="svc-body">
                 <div class="svc-icon-wrap icon-sq-orange">
                     <i class="ph-duotone ph-lightning"></i>
@@ -409,7 +450,7 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
             </div>
         </div>
         <div class="svc-card fade-in" style="transition-delay:0.1s">
-            <img src="images/plumbing.png" alt="24/7 Emergency Plumber Al Quoz Dubai - Pipe Leak Repair" class="svc-img">
+            <img src="images/plumbing.png" alt="24/7 Emergency Plumber Al Quoz Dubai - Pipe Leak Repair" class="svc-img" width="640" height="640" loading="lazy">
             <div class="svc-body">
                 <div class="svc-icon-wrap icon-sq-purple">
                     <i class="ph-duotone ph-wrench"></i>
@@ -425,7 +466,7 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
             </div>
         </div>
         <div class="svc-card fade-in" style="transition-delay:0.2s">
-            <img src="images/amc.png" alt="24/7 Emergency Maintenance Services Al Quoz Dubai" class="svc-img">
+            <img src="images/amc.png" alt="24/7 Emergency Maintenance Services Al Quoz Dubai" class="svc-img" width="640" height="640" loading="lazy">
             <div class="svc-body">
                 <div class="svc-icon-wrap icon-sq-brand">
                     <i class="ph-duotone ph-siren"></i>
@@ -518,28 +559,28 @@ footer{background:var(--text-dark);padding:100px 40px 40px;color:#94a3b8}
     <div class="why-grid">
         <div class="why-card fade-in">
             <div class="why-img-wrap">
-                <img src="images/service_247.png" alt="24/7 Emergency Plumber Electrician Support Dubai Al Quoz">
+                <img src="images/service_247.png" alt="24/7 Emergency Plumber Electrician Support Dubai Al Quoz" width="1024" height="1024" loading="lazy">
             </div>
             <h3 class="why-title">Open 24/7 (All Days)</h3>
             <p class="why-desc">We are open 24 hours a day, 7 days a week (Including Fridays), ensuring you always have support during any emergency in Al Quoz and surrounding areas.</p>
         </div>
         <div class="why-card fade-in" style="transition-delay:0.1s">
             <div class="why-img-wrap">
-                <img src="images/pricing_transparent.png" alt="Transparent Pricing for Plumbing and Electrical Al Quoz">
+                <img src="images/pricing_transparent.png" alt="Transparent Pricing for Plumbing and Electrical Al Quoz" width="1024" height="1024" loading="lazy">
             </div>
             <h3 class="why-title">Transparent Pricing</h3>
             <p class="why-desc">No hidden fees or surprise charges. We provide upfront, honest quotes before any tools touch your property, ensuring complete peace of mind.</p>
         </div>
         <div class="why-card fade-in" style="transition-delay:0.2s">
             <div class="why-img-wrap">
-                <img src="images/local_experts.png" alt="Local Experts Dubai Al Quoz">
+                <img src="images/local_experts.png" alt="Local Experts Dubai Al Quoz" width="1024" height="1024" loading="lazy">
             </div>
             <h3 class="why-title">Local Experts</h3>
             <p class="why-desc">Based centrally in Al Khalidiya District, Al Quoz 4, we provide rapid response services to our community with localized expertise.</p>
         </div>
         <div class="why-card fade-in" style="transition-delay:0.3s">
             <div class="why-img-wrap">
-                <img src="images/google_verified.png" alt="5-Star Verified Maintenance Service in Al Quoz Dubai">
+                <img src="images/google_verified.png" alt="5-Star Verified Maintenance Service in Al Quoz Dubai" width="1024" height="1024" loading="lazy">
             </div>
             <h3 class="why-title">Google Verified</h3>
             <p class="why-desc">We maintain a perfect 5.0-star rating from real customers who trust our prompt, effective, and professional maintenance service.</p>
